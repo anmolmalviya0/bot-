@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-01-17T21:01:15.695505",
+  "model_report": {
+    "BTCUSDT": {
+      "total_samples": 49977,
+      "train_samples": 34983,
+      "test_samples": 14994,
+      "label_win_pct": 38.7,
+      "tp_hit_pct": 21.5,
+      "sl_hit_pct": 56.0,
+      "timeout_pct": 22.5
+    },
+    "PAXGUSDT": {
+      "total_samples": 47166,
+      "train_samples": 33016,
+      "test_samples": 14150,
+      "label_win_pct": 42.1,
+      "tp_hit_pct": 21.1,
+      "sl_hit_pct": 50.0,
+      "timeout_pct": 29.0
+    }
+  },
+  "backtest_report": {
+    "BTCUSDT": {
+      "5m": {
+        "total_trades": 169958,
+        "wins": 80709,
+        "losses": 89249,
+        "win_rate": 47.487614587133294,
+        "profit_factor": 0.867621895732515,
+        "total_return": -2501.1927381492833,
+        "avg_win": 0.2031138502864726,
+        "avg_loss": -0.21170330738630347,
+        "max_drawdown": 2547.1185637477874,
+        "sharpe": -0.8301796228946956,
+        "expectancy": -0.014716534309354566,
+        "avg_bars_held": 4.123159839489756
+      },
+      "15m": {
+        "total_trades": 31947,
+        "wins": 22684,
+        "losses": 9263,
+        "win_rate": 71.00510220051962,
+        "profit_factor": 2.290067313984399,
+        "total_return": 5439.941414928725,
+        "avg_win": 0.42570667544690677,
+        "avg_loss": -0.4552292789494666,
+        "max_drawdown": 30.48296961246251,
+        "sharpe": 5.3238430300552855,
+        "expectancy": 0.17028019579080117,
+        "avg_bars_held": 4.608445237424484
+      },
+      "30m": {
+        "total_trades": 16141,
+        "wins": 11825,
+        "losses": 4316,
+        "win_rate": 73.26064060467134,
+        "profit_factor": 3.027933678168823,
+        "total_return": 5444.2057313236855,
+        "avg_win": 0.6874260564580429,
+        "avg_loss": -0.622012832783288,
+        "max_drawdown": 11.05366932327263,
+        "sharpe": 7.480660618185042,
+        "expectancy": 0.3372904858016037,
+        "avg_bars_held": 4.626045474258101
+      },
+      "1h": {
+        "total_trades": 8445,
+        "wins": 6166,
+        "losses": 2279,
+        "win_rate": 73.01361752516283,
+        "profit_factor": 3.534251523874888,
+        "total_return": 4806.9143021852515,
+        "avg_win": 1.0872028865934558,
+        "avg_loss": -0.8322855184510733,
+        "max_drawdown": 10.945489989457087,
+        "sharpe": 8.9694174226431,
+        "expectancy": 0.5692024040479872,
+        "avg_bars_held": 4.615748963883955
+      }
+    },
+    "PAXGUSDT": {
+      "5m": {
+        "total_trades": 100638,
+        "wins": 15847,
+        "losses": 84791,
+        "win_rate": 15.746537093344463,
+        "profit_factor": 0.09887612867274728,
+        "total_return": -12296.13125139128,
+        "avg_win": 0.08513896998921154,
+        "avg_loss": -0.16092897251843138,
+        "max_drawdown": 12296.04664608501,
+        "sharpe": -14.263368332287179,
+        "expectancy": -0.12218179267663586,
+        "avg_bars_held": 3.2971243466682565
+      },
+      "15m": {
+        "total_trades": 27456,
+        "wins": 12503,
+        "losses": 14953,
+        "win_rate": 45.538315850815856,
+        "profit_factor": 0.5763038980678323,
+        "total_return": -1386.7457950847956,
+        "avg_win": 0.15086194937046185,
+        "avg_loss": -0.2188840197996175,
+        "max_drawdown": 1402.3833606426942,
+        "sharpe": -3.3296201783314157,
+        "expectancy": -0.05050793251328656,
+        "avg_bars_held": 4.163206585081585
+      },
+      "30m": {
+        "total_trades": 13378,
+        "wins": 8246,
+        "losses": 5132,
+        "win_rate": 61.638510988189566,
+        "profit_factor": 1.2033438477733507,
+        "total_return": 341.88219085624445,
+        "avg_win": 0.24535327116956446,
+        "avg_loss": -0.32761123990802493,
+        "max_drawdown": 180.29992710898404,
+        "sharpe": 1.1912179062726127,
+        "expectancy": 0.02555555321096161,
+        "avg_bars_held": 4.547914486470324
+      },
+      "1h": {
+        "total_trades": 6628,
+        "wins": 4572,
+        "losses": 2056,
+        "win_rate": 68.98008449004224,
+        "profit_factor": 1.9609672592327894,
+        "total_return": 903.2267917522436,
+        "avg_win": 0.4031367041974765,
+        "avg_loss": -0.45715672171139066,
+        "max_drawdown": 11.94723837009974,
+        "sharpe": 4.5932429445599885,
+        "expectancy": 0.13627441034282492,
+        "avg_bars_held": 4.788322269161134
+      }
+    }
+  },
+  "correlation_report": {
+    "5m": {
+      "price_correlation": 0.8387404590662444,
+      "returns_correlation": 0.17231497957697245,
+      "rolling_corr_mean": 0.15723083743815058,
+      "rolling_corr_std": 0.22254782682770316,
+      "rolling_corr_min": -0.8740225307682217,
+      "rolling_corr_max": 0.9618963775696049,
+      "samples": 566217
+    },
+    "15m": {
+      "price_correlation": 0.8387392889476147,
+      "returns_correlation": 0.17809762156354605,
+      "rolling_corr_mean": 0.19157626933543603,
+      "rolling_corr_std": 0.229417247186271,
+      "rolling_corr_min": -0.7800891654911967,
+      "rolling_corr_max": 0.9582728323052474,
+      "samples": 188740
+    },
+    "30m": {
+      "price_correlation": 0.8387368597232305,
+      "returns_correlation": 0.16793161955879693,
+      "rolling_corr_mean": 0.19870480647026012,
+      "rolling_corr_std": 0.2401512864661269,
+      "rolling_corr_min": -0.7115407027643459,
+      "rolling_corr_max": 0.9504051267913963,
+      "samples": 94372
+    },
+    "1h": {
+      "price_correlation": 0.8387300271942622,
+      "returns_correlation": 0.12566427089877,
+      "rolling_corr_mean": 0.19355667320379652,
+      "rolling_corr_std": 0.2486810652639333,
+      "rolling_corr_min": -0.7940791765973139,
+      "rolling_corr_max": 0.9135023990914913,
+      "samples": 47188
+    }
+  },
+  "summary": {
+    "total_backtests": 8,
+    "total_trades_simulated": 374591,
+    "avg_win_rate": 57.1,
+    "avg_profit_factor": 1.69,
+    "avg_sharpe": 1.14,
+    "strategies_with_edge": 5,
+    "edge_percentage": 62.5
+  }
+}

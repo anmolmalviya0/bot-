@@ -1,0 +1,190 @@
+{
+  "timestamp": "2026-01-17T23:03:43.171071",
+  "duration": 600,
+  "components": {
+    "binance_api": {
+      "status": "OK",
+      "latency_ms": 319.91,
+      "price": 95409.5
+    },
+    "order_book": {
+      "status": "OK",
+      "data": {
+        "BTCUSDT": {
+          "imbalance": -0.7847,
+          "funding": 0.0018,
+          "ob_bias": "BEARISH",
+          "fr_bias": "NEUTRAL"
+        },
+        "PAXGUSDT": {
+          "imbalance": -0.2175,
+          "funding": 0.0022,
+          "ob_bias": "NEUTRAL",
+          "fr_bias": "NEUTRAL"
+        }
+      }
+    },
+    "alternative_data": {
+      "status": "OK",
+      "data": {
+        "BTCUSDT": {
+          "alpha_score": 0.124,
+          "signal": "BUY",
+          "confidence": 55
+        },
+        "PAXGUSDT": {
+          "alpha_score": 0.124,
+          "signal": "BUY",
+          "confidence": 55
+        }
+      }
+    },
+    "regime_switcher": {
+      "status": "OK",
+      "regime": "TREND",
+      "engine": "TREND",
+      "signal": "NO_TRADE",
+      "confidence": 60,
+      "meta_filtered": true
+    },
+    "profit_guard": {
+      "status": "OK",
+      "can_trade": true,
+      "reason": "OK",
+      "position_size": 712.5,
+      "kelly_pct": 7.12
+    }
+  },
+  "timeframe_analysis": {
+    "BTCUSDT": {
+      "5m": {
+        "total_signals": 74366,
+        "accuracy": 49.5,
+        "buy_signals": 35974,
+        "sell_signals": 38392,
+        "avg_confidence": 75.1
+      },
+      "15m": {
+        "total_signals": 27245,
+        "accuracy": 48.8,
+        "buy_signals": 13059,
+        "sell_signals": 14186,
+        "avg_confidence": 75.2
+      },
+      "30m": {
+        "total_signals": 18666,
+        "accuracy": 48.7,
+        "buy_signals": 8947,
+        "sell_signals": 9719,
+        "avg_confidence": 75.2
+      },
+      "1h": {
+        "total_signals": 11769,
+        "accuracy": 47.2,
+        "buy_signals": 5585,
+        "sell_signals": 6184,
+        "avg_confidence": 75.2
+      }
+    },
+    "PAXGUSDT": {
+      "5m": {
+        "total_signals": 21459,
+        "accuracy": 51.5,
+        "buy_signals": 9971,
+        "sell_signals": 11488,
+        "avg_confidence": 75.6
+      },
+      "15m": {
+        "total_signals": 8720,
+        "accuracy": 50.8,
+        "buy_signals": 3854,
+        "sell_signals": 4866,
+        "avg_confidence": 75.3
+      },
+      "30m": {
+        "total_signals": 5852,
+        "accuracy": 50.2,
+        "buy_signals": 2574,
+        "sell_signals": 3278,
+        "avg_confidence": 75.2
+      },
+      "1h": {
+        "total_signals": 4359,
+        "accuracy": 49.1,
+        "buy_signals": 1929,
+        "sell_signals": 2430,
+        "avg_confidence": 75.2
+      }
+    }
+  },
+  "correlations": {
+    "BTCUSDT": {
+      "5m": {
+        "5m": 1.0,
+        "15m": 0.11113071794790451,
+        "30m": 0.0008736523880171494,
+        "1h": 0.1379276362010324
+      },
+      "15m": {
+        "5m": 0.11113071794790451,
+        "15m": 1.0,
+        "30m": -0.15180313521404554,
+        "1h": -0.19470031604478025
+      },
+      "30m": {
+        "5m": 0.0008736523880171494,
+        "15m": -0.15180313521404554,
+        "30m": 1.0,
+        "1h": -0.015834303231879735
+      },
+      "1h": {
+        "5m": 0.1379276362010324,
+        "15m": -0.19470031604478025,
+        "30m": -0.015834303231879735,
+        "1h": 1.0
+      }
+    },
+    "PAXGUSDT": {
+      "5m": {
+        "5m": 1.0,
+        "15m": -0.030728166516311436,
+        "30m": 0.051020535649651914,
+        "1h": -0.2243600275174155
+      },
+      "15m": {
+        "5m": -0.030728166516311436,
+        "15m": 1.0,
+        "30m": 0.031321027900009485,
+        "1h": 0.03278754564199521
+      },
+      "30m": {
+        "5m": 0.051020535649651914,
+        "15m": 0.031321027900009485,
+        "30m": 1.0,
+        "1h": 0.026503903235635687
+      },
+      "1h": {
+        "5m": -0.2243600275174155,
+        "15m": 0.03278754564199521,
+        "30m": 0.026503903235635687,
+        "1h": 1.0
+      }
+    }
+  },
+  "stress_test": {
+    "total_requests": 1308,
+    "successful": 1308,
+    "failed": 0,
+    "avg_latency_ms": 208.36,
+    "uptime_pct": 100.0,
+    "unique_errors": []
+  },
+  "errors": [],
+  "verdict": {
+    "rating": "PROFESSIONAL AMATEUR",
+    "component_score": 100.0,
+    "avg_accuracy": 49.5,
+    "uptime": 100.0,
+    "error_count": 0
+  }
+}

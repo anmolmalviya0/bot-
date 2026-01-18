@@ -1,301 +1,166 @@
-# 🚀 AEGIS V21 Trading Bot - Quick Start Guide
+# THE ULTIMATE MACHINE
 
-**Self-Evolving AI Trading System**  
-**Status**: Production Infrastructure Ready  
-**Version**: V21 (11 Phases Complete)
-
----
-
-## ⚡ Quick Start (5 Minutes)
-
-### 1. Check System Status
+## Quick Start
 
 ```bash
-cd /Users/anmol/Desktop/gold/aegis_alpha
-python3 -c "from src.executor import AegisExecutor; print('✅ System OK')"
+# 1. Install dependencies
+cd /Users/anmol/Desktop/gold/trading_intelligence
+pip3 install -r requirements.txt
+
+# 2. Train ML models (first time only)
+python3 demo_train.py
+
+# 3. Run THE ULTIMATE MACHINE
+python3 ultimate_machine.py
 ```
 
-### 2. Install PyTorch (Required for LSTM)
+## What It Does
+
+🎯 **Real-time intelligence for BTC & PAXG across 4 timeframes**
+
+- Connects to Binance WebSocket (live data)
+- Builds 5m/15m/30m/1h candles
+- Engineers 60+ technical features
+- 3-engine ML ensemble predictions
+- Multi-timeframe consensus voting
+- Calculates exact entry/SL/TP levels
+- Logs all signals to SQLite database
+- Sends Telegram alerts (high-confidence only)
+- Self-monitoring watchdog
+
+## Dashboard
 
 ```bash
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+streamlit run ui/streamlit_app.py
 ```
 
-### 3. Train LSTM Model
+Visual interface with trade plan cards.
+
+## Telegram Setup (Optional)
 
 ```bash
-python3 src/lstm_trainer.py
-# Wait 60-90 minutes for training
+python3 -c "from alerts.telegram import setup_telegram; setup_telegram()"
 ```
 
-### 4. Start Trading Bot
+Follow prompts to configure Telegram notifications.
+
+## System Architecture
+
+```
+Binance → Candles → Features → ML Ensemble → Signals → Alerts
+                                               ↓
+                                         Performance DB
+                                               ↓
+                                           Dashboard
+```
+
+## Output Format
+
+Every strong signal includes:
+
+- **Signal**: BUY/SELL
+- **Confidence**: 0-100%
+- **Bias Strength**: STRONG/MODERATE/WEAK
+- **Regime**: TREND/CHOP/MEANREV
+- **Entry Zone**: Price range
+- **Stop Loss**: Exact price
+- **Take Profits**: TP1/TP2/TP3
+- **Pip Targets**: Points/pips for each TP
+- **Risk:Reward**: Ratio
+
+## Logs
+
+- Console: Human-readable
+- File: JSON structured (`logs/trading_system_YYYYMMDD.log`)
+
+## Database
+
+SQLite: `data/performance.db`
+
+Query signals:
+```python
+from data.performance_db import PerformanceDB
+
+with PerformanceDB() as db:
+    signals = db.get_signals(asset='BTC', days=7)
+    summary = db.get_summary()
+    print(summary)
+```
+
+## Monitoring
+
+Watchdog checks every 30s:
+- Memory usage (alert if > 2GB)
+- CPU usage (alert if > 90%)
+- Uptime tracking
+
+## Production Deployment
+
+### systemd Service (Linux)
+
+```ini
+[Unit]
+Description=Trading Intelligence System
+After=network.target
+
+[Service]
+Type=simple
+User=trader
+WorkingDirectory=/home/trader/trading_intelligence
+ExecStart=/usr/bin/python3 ultimate_machine.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### macOS LaunchAgent
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.trading.intelligence</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/anmol/Desktop/gold/trading_intelligence/ultimate_machine.py</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
+```
+
+## Environment Variables
 
 ```bash
-cd /Users/anmol/Desktop/gold
-./start.sh  # Interactive mode
-# OR
-./daemon.sh install  # 24/7 daemon mode
+export TELEGRAM_BOT_TOKEN="your_token_here"
+export TELEGRAM_CHAT_ID="your_chat_id_here"
 ```
 
----
+## Important Notes
 
-## 📊 What Is This?
+⚠️ **This is a decision-support system**
+- Does NOT auto-execute trades
+- Provides intelligence for manual trading
+- User makes final execution decision
 
-**AEGIS V21** is an institutional-grade algorithmic trading bot with:
-- ✅ **Self-learning AI** (learns from every tick)
-- ✅ **24/7 operation** (runs forever)
-- ✅ **Self-healing** (fixes problems automatically)
-- ✅ **Deep learning** (LSTM neural networks)
-- ✅ **Comprehensive backtesting** (validates before trading)
+✅ **Safety First**
+- All signals are recommendations
+- Always verify before executing
+- Use proper position sizing
+- Never risk more than you can afford to lose
 
-**Built in**: 10 phases over 6 hours  
-**Value**: $50K-$500K as commercial product  
-**Rating**: 9.5/10 infrastructure
+## Support
 
----
-
-## 🎯 Current Status
-
-### ✅ What Works
-- Real-time data processing (Binance WebSocket)
-- Continuous learning engine (172,800 updates/day)
-- Health monitoring (60-second checks)
-- Self-healing (6 recovery actions)
-- Backtesting framework
-- LSTM training system
-- Daemon deployment
-
-### ⚠️ What Needs Work
-- **Trading strategy** (rule-based strategies failed backtesting)
-- **Solution**: Train LSTM to learn patterns (Phase 10)
-- **Status**: Awaiting PyTorch installation
+Logs are your friend. Check `logs/` directory for detailed JSON logs of all system activity.
 
 ---
 
-## 📁 File Structure
-
-```
-aegis_alpha/
-├── src/
-│   ├── executor.py              # Main trading engine (609 lines)
-│   ├── learning_engine.py       # Continuous learning (294 lines)
-│   ├── lstm_model.py            # LSTM neural network (250 lines)
-│   ├── lstm_trainer.py          # Training system (280 lines)
-│   ├── health_monitor.py        # Health checks (380 lines)
-│   ├── recovery_system.py       # Self-healing (431 lines)
-│   ├── auto_optimizer.py        # A/B testing (470 lines)
-│   ├── backtest_engine.py       # Backtesting (400 lines)
-│   ├── strategy_optimizer.py    # Parameter optimization (300 lines)
-│   ├── data_fetcher.py          # WebSocket data (168 lines)
-│   ├── quant_utils.py           # Statistics & math
-│   └── ... (5 more modules)
-│
-├── models/                      # Saved ML models
-├── config.yaml                  # Configuration
-├── daemon.sh                    # Daemon control script
-├── start.sh                     # Quick start script
-└── com.aegis.trading.plist     # macOS LaunchAgent
-
-Total: 4,500+ lines of production code
-```
-
----
-
-## 🔧 Commands Reference
-
-### Control Bot
-
-```bash
-# Start (interactive)
-./start.sh
-
-# Start (daemon - 24/7)
-./daemon.sh install
-./daemon.sh start
-
-# Check status
-./daemon.sh status
-
-# View logs
-./daemon.sh logs
-./daemon.sh errors
-
-# Stop
-./daemon.sh stop
-
-# Restart
-./daemon.sh restart
-
-# Uninstall daemon
-./daemon.sh uninstall
-```
-
-### Training & Testing
-
-```bash
-# Train LSTM model
-python3 src/lstm_trainer.py
-
-# Run backtest (30 days)
-python3 src/backtest_engine.py
-
-# Optimize parameters
-python3 src/strategy_optimizer.py
-
-# Test LSTM model
-python3 src/lstm_model.py
-```
-
----
-
-## 📊 Performance Metrics
-
-### Infrastructure
-- **Code Quality**: 9.5/10 ⭐⭐⭐⭐⭐
-- **Reliability**: 9/10 ⭐⭐⭐⭐⭐
-- **Self-Healing**: 94.7% success rate
-- **Uptime**: 100% (with daemon)
-
-### Strategy (After LSTM Training)
-- **Target Accuracy**: 60-70%
-- **Target Win Rate**: 58-68%
-- **Target Monthly Return**: 15-30%
-- **Max Drawdown**: <15%
-
----
-
-## ⚠️ Critical Warnings
-
-### DO NOT Trade Live Until:
-- ✅ LSTM model trained
-- ✅ Backtest shows +20%+ return on 3+ months
-- ✅ Win rate >60%
-- ✅ Profit factor >1.5
-- ✅ Paper traded successfully for 2+ weeks
-
-### Current Backtest Results:
-- Mean Reversion: -20.9% ❌
-- Trend Following: -78.5% ❌
-- **LSTM: Not yet tested** ⏳
-
-**Bottom line**: Infrastructure is ready, strategy needs ML training.
-
----
-
-## 🎯 Next Steps
-
-### This Week
-1. Install PyTorch (5 min)
-2. Train LSTM (60-90 min)
-3. Backtest LSTM predictions
-4. If profitable → paper trade
-
-### If LSTM Works (>60% accuracy)
-1. Train on 180 days (better accuracy)
-2. Paper trade 2 weeks
-3. Start live with $10-50
-4. Scale gradually
-
-### If LSTM Doesn't Work
-1. Research proven strategies
-2. Consider buying/licensing strategy
-3. Or wait for better market conditions
-
----
-
-## 💡 Tips
-
-### Monitoring
-- Check logs every day initially
-- Watch for health alerts
-- Monitor ML accuracy trend
-- Verify self-healing works
-
-### Risk Management
-- Never risk >3% per trade
-- Always use stop losses
-- Start with tiny capital
-- Scale slowly
-
-### Expectations
-- This is NOT get-rich-quick
-- Requires 12-18 months for $100→$10K goal
-- Markets are hard
-- Be patient
-
----
-
-## 📚 Documentation
-
-**Complete guides in** `/Users/anmol/.gemini/antigravity/brain/<id>/`:
-- `COMPLETE_SYSTEM_DOCUMENTATION.md` - Full system overview
-- `honest_assessment.md` - Realistic capabilities
-- `phase10_complete.md` - LSTM training guide
-- `FINAL_BRUTAL_TRUTH.md` - What works, what doesn't
-
----
-
-## 🆘 Troubleshooting
-
-### Bot won't start
-```bash
-# Check Python version
-python3 --version  # Need 3.8+
-
-# Check dependencies
-pip install -r requirements.txt
-
-# Check logs
-tail -f aegis.log
-```
-
-### LSTM training fails
-```bash
-# Check PyTorch installed
-python3 -c "import torch; print(torch.__version__)"
-
-# Reinstall if needed
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-```
-
-### No trades generating
-- Check accuracy >55% in logs
-- Verify regime detection working
-- Review signal_filter.py thresholds
-- May need LSTM for better signals
-
----
-
-## 🏆 What You Built
-
-**In 6 hours**:
-- Complete trading infrastructure ✅
-- Self-evolving AI system ✅
-- 24/7 operation capability ✅
-- Health monitoring & self-healing ✅
-- LSTM deep learning ✅
-- Comprehensive backtesting ✅
-
-**Worth**: $50K-$500K (commercial value)  
-**Quality**: Institutional-grade  
-**Missing**: Just profitable strategy (LSTM training)
-
----
-
-## 📞 Support
-
-**For issues**:
-1. Check logs: `./daemon.sh logs`
-2. Review documentation
-3. Check backtest results
-4. Verify PyTorch installed
-
-**Remember**: This is a professional trading system. Take time to understand it before risking capital.
-
----
-
-**Created**: January 15, 2026  
-**Version**: AEGIS V21 (11 Phases)  
-**Status**: Infrastructure Complete, Strategy Pending LSTM  
-
-🚀 **Start training the AI and let's see if it cracks the market!**
+**THE ULTIMATE MACHINE** - Institutional-grade trading intelligence, locally on your Mac.
