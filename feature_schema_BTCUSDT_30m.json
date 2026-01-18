@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "strategy": "TREND_FOLLOWING",
+  "features": [
+    "ret_1",
+    "ret_2",
+    "ret_3",
+    "ret_5",
+    "ret_10",
+    "atr_pct",
+    "vol_10",
+    "vol_20",
+    "vol_50",
+    "rsi",
+    "hour",
+    "day_of_week",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "dist_sma_20",
+    "dist_sma_50",
+    "dist_sma_200",
+    "ma_20_above_50",
+    "ma_50_above_200",
+    "adx",
+    "trend_strength",
+    "momentum_10",
+    "momentum_20",
+    "roc_10"
+  ],
+  "count": 25,
+  "created_at": "2026-01-18T00:44:09.149110"
+}

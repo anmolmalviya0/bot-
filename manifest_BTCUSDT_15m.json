@@ -1,0 +1,106 @@
+{
+  "model_id": "sha256:65ab10398612cf86",
+  "model_type": "lightgbm",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "created_at": "2026-01-18T00:46:08.915862",
+  "train_samples": 409490,
+  "n_folds": 4,
+  "purge_window": 24,
+  "hyperparams": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "min_child_samples": 50,
+    "n_estimators": 500,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.1,
+    "subsample": 0.8
+  },
+  "metrics": {
+    "avg_accuracy": 0.5136047436917628,
+    "avg_auc": 0.5184984670055477,
+    "avg_precision": 0.5108227002093969,
+    "avg_recall": 0.4584072538362083,
+    "avg_f1": 0.4814425381439942,
+    "std_accuracy": 0.0018923622690192657
+  },
+  "fold_results": [
+    {
+      "fold": 1,
+      "train_size": 160808,
+      "test_size": 38957,
+      "accuracy": 0.5156967939009678,
+      "precision": 0.5142204317238891,
+      "recall": 0.4421923474663909,
+      "f1": 0.475494148063718,
+      "auc": 0.5210251866153066,
+      "filtered_trades": 2069,
+      "filtered_accuracy": 0.5224746254229096
+    },
+    {
+      "fold": 2,
+      "train_size": 121851,
+      "test_size": 38957,
+      "accuracy": 0.5152860846574429,
+      "precision": 0.5209263968112158,
+      "recall": 0.3888774882002873,
+      "f1": 0.44531915518608817,
+      "auc": 0.522327546076719,
+      "filtered_trades": 2100,
+      "filtered_accuracy": 0.5333333333333333
+    },
+    {
+      "fold": 3,
+      "train_size": 82894,
+      "test_size": 38957,
+      "accuracy": 0.5117437174320405,
+      "precision": 0.5086020341917334,
+      "recall": 0.4861161383732354,
+      "f1": 0.49710493614996165,
+      "auc": 0.5135147175365105,
+      "filtered_trades": 5547,
+      "filtered_accuracy": 0.5045970795024337
+    },
+    {
+      "fold": 4,
+      "train_size": 43937,
+      "test_size": 38957,
+      "accuracy": 0.5116923787765998,
+      "precision": 0.4995419381107492,
+      "recall": 0.5164430413049198,
+      "f1": 0.5078519131762088,
+      "auc": 0.5171264177936545,
+      "filtered_trades": 6325,
+      "filtered_accuracy": 0.5168379446640317
+    }
+  ],
+  "feature_count": 25,
+  "feature_names": [
+    "ret_1",
+    "ret_2",
+    "ret_3",
+    "ret_5",
+    "ret_10",
+    "atr_pct",
+    "vol_10",
+    "vol_20",
+    "vol_50",
+    "rsi",
+    "hour",
+    "day_of_week",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "dist_sma_20",
+    "dist_sma_50",
+    "dist_sma_200",
+    "ma_20_above_50",
+    "ma_50_above_200"
+  ],
+  "artifacts": {
+    "primary_model": "/Users/anmol/Desktop/gold/marketforge/models/primary_BTCUSDT_15m.pkl",
+    "scaler": "/Users/anmol/Desktop/gold/marketforge/models/scaler_BTCUSDT_15m.pkl",
+    "meta_model": "/Users/anmol/Desktop/gold/marketforge/models/meta_BTCUSDT_15m.pkl"
+  }
+}

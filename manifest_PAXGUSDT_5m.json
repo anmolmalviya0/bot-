@@ -1,0 +1,106 @@
+{
+  "model_id": "sha256:91c9c127804445d8",
+  "model_type": "lightgbm",
+  "symbol": "PAXGUSDT",
+  "timeframe": "5m",
+  "created_at": "2026-01-18T00:47:41.628346",
+  "train_samples": 1125708,
+  "n_folds": 4,
+  "purge_window": 24,
+  "hyperparams": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "min_child_samples": 50,
+    "n_estimators": 500,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.1,
+    "subsample": 0.8
+  },
+  "metrics": {
+    "avg_accuracy": 0.6170984807379273,
+    "avg_auc": 0.6591846828804584,
+    "avg_precision": 0.6513896966091315,
+    "avg_recall": 0.685145492071458,
+    "avg_f1": 0.6654104321412556,
+    "std_accuracy": 0.04780167105618994
+  },
+  "fold_results": [
+    {
+      "fold": 1,
+      "train_size": 447297,
+      "test_size": 110580,
+      "accuracy": 0.5482184843552179,
+      "precision": 0.5783902072078233,
+      "recall": 0.6885104443105778,
+      "f1": 0.6286644466908485,
+      "auc": 0.5479462440073991,
+      "filtered_trades": 44188,
+      "filtered_accuracy": 0.5930569385353489
+    },
+    {
+      "fold": 2,
+      "train_size": 336717,
+      "test_size": 110580,
+      "accuracy": 0.606737203834328,
+      "precision": 0.6830794641218573,
+      "recall": 0.5867211021611312,
+      "f1": 0.6312442232190555,
+      "auc": 0.6514073833861366,
+      "filtered_trades": 34535,
+      "filtered_accuracy": 0.7282177501085855
+    },
+    {
+      "fold": 3,
+      "train_size": 226137,
+      "test_size": 110580,
+      "accuracy": 0.6806836679327184,
+      "precision": 0.6981946869543527,
+      "recall": 0.7373715753424658,
+      "f1": 0.7172485586162716,
+      "auc": 0.7535007549093213,
+      "filtered_trades": 47539,
+      "filtered_accuracy": 0.7538231767601338
+    },
+    {
+      "fold": 4,
+      "train_size": 115557,
+      "test_size": 110580,
+      "accuracy": 0.6327545668294448,
+      "precision": 0.6458944281524927,
+      "recall": 0.7279788464716576,
+      "f1": 0.684484500038847,
+      "auc": 0.6838843492189763,
+      "filtered_trades": 47816,
+      "filtered_accuracy": 0.7001003848084323
+    }
+  ],
+  "feature_count": 43,
+  "feature_names": [
+    "ret_1",
+    "ret_3",
+    "ret_5",
+    "ret_10",
+    "ret_20",
+    "atr_pct",
+    "vol_10",
+    "vol_30",
+    "rsi",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "roc_5",
+    "roc_10",
+    "momentum",
+    "momentum_slope",
+    "dist_sma_10",
+    "dist_sma_20",
+    "dist_sma_50",
+    "dist_sma_100"
+  ],
+  "artifacts": {
+    "primary_model": "/Users/anmol/Desktop/gold/marketforge/models/primary_PAXGUSDT_5m.pkl",
+    "scaler": "/Users/anmol/Desktop/gold/marketforge/models/scaler_PAXGUSDT_5m.pkl",
+    "meta_model": "/Users/anmol/Desktop/gold/marketforge/models/meta_PAXGUSDT_5m.pkl"
+  }
+}

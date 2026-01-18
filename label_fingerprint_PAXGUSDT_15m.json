@@ -1,0 +1,17 @@
+{
+  "symbol": "PAXGUSDT",
+  "timeframe": "15m",
+  "tp_mult": 1.0,
+  "sl_mult": 1.0,
+  "max_hold": 12,
+  "atr_period": 14,
+  "created_at": "2026-01-18T00:36:43.750563",
+  "stats": {
+    "total_samples": 188729,
+    "tp_count": 89230.0,
+    "sl_count": 87157.0,
+    "vertical_count": 12342.0,
+    "avg_hold": 3.986875360967313,
+    "win_rate": 49.92873379289881
+  }
+}

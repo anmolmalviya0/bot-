@@ -1,0 +1,17 @@
+{
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "tp_mult": 1.0,
+  "sl_mult": 1.0,
+  "max_hold": 12,
+  "atr_period": 14,
+  "created_at": "2026-01-18T00:06:11.546940",
+  "stats": {
+    "total_samples": 199990,
+    "tp_count": 94852.0,
+    "sl_count": 97577.0,
+    "vertical_count": 7561.0,
+    "avg_hold": 3.75960798039902,
+    "win_rate": 49.42847142357118
+  }
+}

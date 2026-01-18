@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-01-18T08:38:37.568720+00:00",
+  "status": "LIVE",
+  "prices": {
+    "BTCUSDT": {
+      "price": 95125.66,
+      "change": -0.133,
+      "high": 95639.45,
+      "low": 94876.33
+    },
+    "PAXGUSDT": {
+      "price": 4622.1,
+      "change": 0.22,
+      "high": 4624.97,
+      "low": 4602.93
+    }
+  },
+  "signals": {
+    "btc": {
+      "15m": {
+        "signal": "WAIT",
+        "entry": 95130.96,
+        "tp": 0,
+        "sl": 0,
+        "rsi": 54.2,
+        "trend": "DOWN",
+        "atr": 61.15
+      },
+      "30m": {
+        "signal": "WAIT",
+        "entry": 95130.96,
+        "tp": 0,
+        "sl": 0,
+        "rsi": 61.8,
+        "trend": "UP",
+        "atr": 91.28
+      },
+      "1h": {
+        "signal": "WAIT",
+        "entry": 95130.95,
+        "tp": 0,
+        "sl": 0,
+        "rsi": 38.8,
+        "trend": "DOWN",
+        "atr": 152.37
+      }
+    },
+    "gold": {
+      "15m": {
+        "signal": "WAIT",
+        "entry": 4622.1,
+        "tp": 0,
+        "sl": 0,
+        "rsi": 58.4,
+        "bb_upper": 4624.83,
+        "bb_lower": 4614.97,
+        "bb_middle": 4619.9,
+        "condition": "RSI=58 (NEUTRAL)"
+      },
+      "30m": {
+        "signal": "WAIT",
+        "entry": 4622.1,
+        "tp": 0,
+        "sl": 0,
+        "rsi": 69.9,
+        "bb_upper": 4625.14,
+        "bb_lower": 4609.6,
+        "bb_middle": 4617.37,
+        "condition": "RSI=70 (NEUTRAL)"
+      },
+      "1h": {
+        "signal": "SELL",
+        "entry": 4622.1,
+        "tp": 4612.97,
+        "sl": 4625.6,
+        "rsi": 86.5,
+        "bb_upper": 4624.27,
+        "bb_lower": 4601.66,
+        "bb_middle": 4612.97,
+        "condition": "RSI=86 (OVERBOUGHT)"
+      }
+    }
+  },
+  "session": {
+    "name": "Europe",
+    "emoji": "\ud83c\udf0d"
+  },
+  "metrics": {
+    "btc": {
+      "win_rate": 69.9,
+      "profit_factor": 2.32,
+      "trades": 8446,
+      "source": "verified_backtest"
+    },
+    "gold": {
+      "win_rate": 57.8,
+      "profit_factor": 1.28,
+      "trades": 1805,
+      "source": "rule_based_test"
+    }
+  }
+}
