@@ -1,5 +1,19 @@
 # THE ULTIMATE MACHINE
 
+Advanced cryptocurrency trading intelligence system with ML-powered multi-timeframe analysis for BTC and PAXG.
+
+## Features
+
+- Real-time market data via Binance WebSocket
+- Multi-timeframe analysis (5m, 15m, 30m, 1h)
+- 3-engine ML ensemble (trend, mean reversion, regime detection)
+- 60+ technical indicators
+- Genetic algorithm optimization
+- Telegram alerts for high-confidence signals
+- Performance tracking database
+- Streamlit dashboard
+- System health monitoring
+
 ## Quick Start
 
 ```bash
